@@ -8,7 +8,7 @@ import { ICONS } from '../../data/icons'
 
 const Hero = () => {
   return (
-    <section className=" relative min-h-screen flex items-center overflow-hidden bg-black">
+    <section className=" relative min-h-screen py-10 flex items-center overflow-hidden bg-black">
       <RadialGradientBackground variant="hero" />
 
       {/* Content Container */}
@@ -55,7 +55,7 @@ const Hero = () => {
                   </div>
                 </button>
                 <button
-                  onClick={() => scrollToSection('content')}
+                  onClick={() => scrollToSection('contact')}
                   className="inline-flex shrink-0 items-center gap-0 mb-12 group">
                   <div className="relative z-10 in-hover:cursor-pointer hover:opacity-80 bg-white text-[#212121] rounded-[17px] px-[26px] py-[13px] text-base font-medium border border-white">
                     Get in Touch

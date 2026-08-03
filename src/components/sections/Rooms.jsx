@@ -53,7 +53,7 @@ const Rooms = () => {
                                         </ul>
                                     </Card.Body>
                                     <Card.Footer className='px-[30px] py-[5px] mx-auto text-center mb-5'>
-                                        <button onClick={() => scrollToSection('whyus')} className='in-hover:cursor-pointer tracking-wide justify-between gap-2 px-9 py-3.5 bg-[radial-gradient(circle,#FFF4B0_0%,#FFD700_0%,#D4AF37_63%,#8B7500_100%)] bg-clip  text-[#212121]/90 font-bold rounded-[17px] border-white opacity-70 hover:opacity-100 hover:scale-105 ease-out transition-all duration-300'>
+                                        <button onClick={() => scrollToSection('contact')} className='in-hover:cursor-pointer tracking-wide justify-between gap-2 px-9 py-3.5 bg-[radial-gradient(circle,#FFF4B0_0%,#FFD700_0%,#D4AF37_63%,#8B7500_100%)] bg-clip  text-[#212121]/90 font-bold rounded-[17px] border-white opacity-70 hover:opacity-100 hover:scale-105 ease-out transition-all duration-300'>
                                             Enquire About this Room
                                         </button>
                                     </Card.Footer>
