@@ -38,7 +38,7 @@ const Rooms = () => {
                             <FadeIn key={index.id} delay={index.id * 200}>
 
 
-                                <Card className='items-center gap-2.5  bg-linear-to-r from-primary/10 via-primary/15 via-primary/20 border border-primary/20  rounded-2xl overflow-hidden m-px h-[calc(100%-2px)]' key={index.id}>
+                                <Card className='items-center gap-2.5  bg-linear-to-r from-primary/10 via-primary/15 via-primary/20 border border-primary/20  rounded-2xl overflow-hidden m-px h-[calc(100%-2px)] hover:border-white/80'  key={index.id}>
                                     <Card.Header className='mb-5' >
                                         <img src={index.img} className='w-full  mask-[linear-gradient(to_bottom,black_60%,transparent_100%)]  object-cover ' />
                                     </Card.Header>

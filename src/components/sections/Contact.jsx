@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import FadeIn from '../animations/FadeIn';
 import { pg } from '../../data/data';
 import { scrollToSection } from '../../hooks/useScrollSpy';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
@@ -14,6 +15,7 @@ const Contact = () => {
         phone: ''
     });
     const [status, setStatus] = useState({ type: '', message: '' });
+    const [isLoading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -22,14 +24,14 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
 
         e.preventDefault();
-
+        setLoading(true)
         const trimmedName = formData.name.trim();
         const trimmedEmail = formData.email.trim();
         const trimmedMessage = formData.message.trim();
-        const trimmedPhone = formData.phone.trim();
+        const trimmedPhone = formData.phone;
         // Required fields
         if (!trimmedName || !trimmedEmail || !trimmedPhone || !trimmedMessage) {
             setStatus({ type: 'error', message: 'Please fill in all fields' });
@@ -67,9 +69,33 @@ const Contact = () => {
             return;
         }
 
-        // setIsSubmitting(true);
-        setStatus({ type: 'success', message: 'Message sent successfully We\'ll get back to you soon' });
-        setFormData({ name: '', email: '', message: '' });
+        try {
+            console.log("formSubmitted", formData);
+
+            await emailjs.send("service_60rqdnt", "template_fb5n4va", {
+                from: formData.name,
+                to_name: "Kishor Binwade",
+                from_email: formData.email,
+                user_email: "shribinwade.100@gmail.com",
+                user_message: formData.message
+            },"dx592qq5D4kUOhYNT");
+
+            setLoading(false);
+            // setIsSubmitting(true);
+            setStatus({ type: 'success', message: 'Message sent successfully We\'ll get back to you soon' });
+            setFormData({ name: '', email: '', message: '' });
+          
+        } catch (error) {
+            setLoading(false);
+            console.log(error);
+            alert("failed")
+        }
+
+
+
+
+
+
         setTimeout(() => setStatus({ type: '', message: '' }), 5000);
     };
 
@@ -79,7 +105,9 @@ const Contact = () => {
         location: Pin,
         email: Mail
     }
-
+    const defaultMsg = `Hi, I'm interested in ${pg.suffix || 'your services'}!`;
+    // service_60rqdnt
+    //template_fb5n4va
     return (
         <section id="contact" className='relative py-20  overflow-hidden bg-black'>
             <div className="absolute inset-0 overflow-hidden">
@@ -125,7 +153,9 @@ const Contact = () => {
                                 </div>
 
                                 <button type='submit' className='w-full px-6 py-3 bg-linear-to-r from-primary/10 to-primary text-white font-medium rounded-xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 group'>
-                                    <span>Send Message</span>
+
+                                    <span> {!isLoading ? "Send" : "Sending"} </span>
+
                                     <Send className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
                                 </button>
                                 {status.message && (
@@ -174,7 +204,7 @@ const Contact = () => {
                                 <div className='flex-1'>
                                     <p className='text-sm text-white/60 mb-1'>WhatsApp</p>
                                     <a
-                                        href={`https://wa.me/${pg.phone.replace(/\D/g, '')}`}
+                                        href={`https://wa.me/${pg.phone.replace(/\D/g, '')}?text=${encodeURIComponent(defaultMsg)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className='text-white hover:text-[#A8FF8D] transition-colors font-medium'

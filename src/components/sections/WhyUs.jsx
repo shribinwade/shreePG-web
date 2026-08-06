@@ -14,13 +14,13 @@ const WhyUs = () => {
             <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='grid grid-cols-1 gap-5 items-center mb-20'>
                     <FadeIn delay={200}>
-                        <Card className="max-w-60 items-center gap-2.5 px-[18px] py-[5px] mb-5 bg-linear-to-r from-primary/10 via-primary/15 via-primary/20 border border-primary/20 rounded-full ">
+                        <Card className="max-w-40 items-center gap-2.5 px-[18px] py-[5px] mb-5 bg-linear-to-r from-primary/10 via-primary/15 via-primary/20 border border-primary/20 rounded-full">
                             <p className='text-primary tracking-wider  text-md text-center'>Why Choose Us </p>
                         </Card>
                     </FadeIn>
                     
                     <FadeIn delay={300}>
-                        <div className=' max-w-1/2'>
+                        <div className='md:max-w-1/2'>
                             <h1 className="tracking-wider text-3xl md:text-2xl lg:text-4xl font-bold text-white mb-4 leading-tight">
                                 Built around comfort, safety and focus
                             </h1>
@@ -35,7 +35,7 @@ const WhyUs = () => {
                                 const Icon = ICONS[icon];
                                 return (
                                     <FadeIn key={index} delay={index * 100}>
-                                        <Card className="items-center   px-[40px] py-[40px] mb-5 bg-linear-to-r from-primary/10 via-primary/15 via-primary/20 border border-primary/20 rounded-2xl">
+                                        <Card className="items-center   px-[40px] py-[40px] mb-5 bg-linear-to-r from-primary/10 via-primary/15 via-primary/20 border border-primary/20 rounded-2xl hover:border-white hover:scale-105 transition-all duration-300">
                                             <Card.Header className="flex items-center gap-2 border-none font-semibold mb-2">
                                                 <div className='px-2 py-2 mb-3 bg-radial from-primary/10 via-primary/15 via-primary/20 border border-primary/20 rounded-2xl'>
                                                     <svg

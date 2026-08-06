@@ -1,6 +1,83 @@
-export const REVIEWS = [
-  ["Ananya Sharma", "Final-year student, MIT College", "I moved in three semesters ago and never looked back. The rooms are spotless, the Wi-Fi never drops during online exams, and the warden genuinely looks out for us."],
-  ["Rohit Deshmukh", "Software Engineer, Hinjawadi", "Feels closer to a serviced apartment than a PG. Power backup keeps my late-night deployments alive and the covered parking for my car sealed the deal."],
-  ["Priya Nair", "Data Analyst", "As a woman living alone in a new city, the CCTV coverage and biometric entry gave my parents peace of mind. Housekeeping every single day is a luxury."],
-  ["Karthik Menon", "MBA Student", "Transparent pricing — what they quote is what you pay. The study lounge is my favourite corner of the building."],
+
+
+export const reviews = [
+  {
+    id: 1,
+    reviewer: "Sanket Wadghare",
+    reviewCount: 2,
+    timeAgo: "5 days ago",
+    isNew: true,
+    rating: 5,
+    text: "Good"
+  },
+  {
+    id: 2,
+    reviewer: "Varad Sir Salve",
+    reviewCount: null,
+    timeAgo: "a week ago",
+    isNew: true,
+    rating: 5,
+    text: "good facilities and services"
+  },
+  {
+    id: 3,
+    reviewer: "Tushar Sanap",
+    reviewCount: 8,
+    photoCount: 4,
+    timeAgo: "a week ago",
+    isNew: true,
+    rating: 5,
+    text: "Good for staying, Luxury Rooms"
+  },
+  {
+    id: 4,
+    reviewer: "Mohan M",
+    reviewCount: 1,
+    timeAgo: "a week ago",
+    isNew: true,
+    rating: 4,
+    text: "Very good PG with clean rooms and a peaceful environment. The owner and staff are friendly and helpful. Food quality is good, and all basic facilities like Wi-Fi, water, and cleanliness are well maintained. Safe and comfortable place for students and working professionals. Highly recommended!"
+  },
+  {
+    id: 5,
+    reviewer: "Shreyash Musale",
+    reviewCount: 4,
+    timeAgo: "a week ago",
+    isNew: true,
+    rating: 4,
+    text: "Rooms are spacious, has nice ventilation through windows. Found clean and hygienic environment"
+  },
+  {
+    id: 6,
+    reviewer: "Pratik Bhor",
+    isLocalGuide: true,
+    reviewCount: 7,
+    photoCount: 29,
+    timeAgo: "a week ago",
+    isNew: true,
+    rating: 4,
+    text: "Amazing place with a homely feel and supportive staff. Safe, spacious, and worth every penny."
+  },
+  {
+    id: 7,
+    reviewer: "Sanket Kadam",
+    reviewCount: 1,
+    timeAgo: "a week ago",
+    isNew: true,
+    rating: 5,
+    text: "Excellent"
+  },
+  {
+    id: 8,
+    reviewer: "Vrushabh Doshi",
+    reviewCount: 1,
+    timeAgo: "a week ago",
+    isNew: true,
+    rating: 5,
+    text: "Hygienic food"
+  }
 ];
+
+// Default export for convenience
+export default reviews;
+

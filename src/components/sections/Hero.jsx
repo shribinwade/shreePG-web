@@ -30,7 +30,7 @@ const Hero = () => {
                 Luxury, spacious
                 and secure living
               </h1>
-              
+
             </FadeIn>
 
             <FadeIn delay={300}>
@@ -111,9 +111,10 @@ const Hero = () => {
 
       {/* scroll Indicator */}
       <button
-       onClick={()=> scrollToSection('whyus')}
-       className='absolute left-1/2 bottom-8 -transalte-x-12 animate-bounce'>
-         <ChevronDown className='w-8 h-8 text-primary'></ChevronDown>
+        onClick={() => scrollToSection('whyus')}
+        className='hidden md:flex absolute left-1/2 bottom-8 -translate-x-1/2 animate-bounce hover:cursor-pointer'
+      >
+        <ChevronDown className='w-8 h-8 text-primary' />
       </button>
 
     </section>

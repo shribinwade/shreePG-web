@@ -5,7 +5,7 @@ import { pg } from '../../data/data';
 import { useScrollSpy } from '../../hooks/useScrollSpy';
 import { NAV } from '../../data/nav';
 import { scrollToSection } from '../../hooks/useScrollSpy';
-
+import { FaWhatsapp } from "react-icons/fa";
 const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +24,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }
 
+  const defaultMsg = `Hi, I'm interested in ${pg.suffix || 'your services'}!`;
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-1000 w-full py-4 transition-all duration-300 ${isScrolled ? 'bg-black/30 backdrop-blur-lg' : 'bg-transparent'}`}
@@ -38,7 +39,7 @@ const Navbar = () => {
             <img className='w-15 h-14' src="assets/logo.avif" alt="logo" />
             <div>
               <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="uppercase text-2xl font-bold bg-gradient-to-r from-[#7A5C00] via-[#D4AF37] to-[#FFE082] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+                className="uppercase hover:cursor-pointer text-2xl font-bold bg-gradient-to-r from-[#7A5C00] via-[#D4AF37] to-[#FFE082] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
                 aria-label='home'
               >
                 {pg.name.split(' ')[0]}
@@ -54,7 +55,7 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`bg-gradient-to-r from-[#7A5C00] via-[#D4AF37] to-[#FFE082] bg-clip-text text-transparent  font-medium transition-all duration-300 ${activeSection === link.id ? 'text-white' : 'text-white/70 hover:text-white'}`}
+                className={`bg-gradient-to-r from-[#7A5C00] via-[#D4AF37] to-[#FFE082] bg-clip-text text-transparent  font-medium transition-all duration-300 hover:cursor-pointer ${activeSection === link.id ? 'text-white' : 'text-white/70 hover:text-white'}`}
               >
                 {link.label}
               </button>
@@ -63,13 +64,13 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden xl:flex items-center gap-2">
-            <a href={`https://wa.me/${pg.phone.replace(/\D/g, '')}`}
+            <a href={`https://wa.me/${pg.phone.replace(/\D/g, '')}?text=${encodeURIComponent(defaultMsg)}`}
               target="_blank"
               rel="noopener noreferrer" >
               <button
                 className="flex in-hover:cursor-pointer tracking-wide justify-between gap-2 px-9 py-3.5 bg-[radial-gradient(circle,#FFF4B0_0%,#FFD700_0%,#D4AF37_63%,#8B7500_100%)] bg-clip  text-[#212121]  font-bold text-base rounded-[17px] border-white hover:opacity-80 transition-all duration-300"
               >
-                <Phone className='w-5'></Phone> WhatsApp Now
+                <FaWhatsapp className='w-5 h-5' /> WhatsApp Now
               </button>
             </a>
           </div>
