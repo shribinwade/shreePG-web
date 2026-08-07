@@ -8,6 +8,7 @@ import Contact from './components/sections/Contact';
 import Location from './components/sections/Location';
 import Footer from './components/layout/Footer';
 import Testimonials from './components/sections/Testimonials';
+import Gallery from './components/sections/Gallery';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
           <WhyUs />
           <Rooms />
           <Amenities />
+          <Gallery />
           <Testimonials />
           <Location />
           <Contact />

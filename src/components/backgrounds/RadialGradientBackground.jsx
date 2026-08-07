@@ -14,7 +14,7 @@ const RadialGradientBackground = ({ variant = 'hero', gradients = [], grain = fa
           { color: 'rgba(141,255,105,0.45)', stop: '100%' },
           { color: 'rgba(141,255,105,0.25)', stop: '100%' },
         ],
-        blur: '0px',
+        blur: '2px',
         opacity: 0.5,
       },
       {
@@ -27,7 +27,7 @@ const RadialGradientBackground = ({ variant = 'hero', gradients = [], grain = fa
           { color: 'rgba(141,255,105,0.45)', stop: '100%' },
           { color: 'rgba(141,255,105,0.25)', stop: '100%' },
         ],
-        blur: '0px',
+        blur: '3px',
         opacity: 0.5,
       },
       {
@@ -40,7 +40,7 @@ const RadialGradientBackground = ({ variant = 'hero', gradients = [], grain = fa
           { color: 'rgba(141,255,105,0.45)', stop: '100%' },
           { color: 'rgba(141,255,105,0.25)', stop: '100%' },
         ],
-        blur: '0px',
+        blur: '4px',
         opacity: 0.5,
       },
 
@@ -56,7 +56,7 @@ const RadialGradientBackground = ({ variant = 'hero', gradients = [], grain = fa
           { color: 'rgba(141,255,105,0.45)', stop: '100%' },
           { color: 'rgba(141,255,105,0.25)', stop: '100%' },
         ],
-        blur: '0px',
+        blur: '2px',
         opacity: 0.5,
       },
     ],
@@ -71,7 +71,7 @@ const RadialGradientBackground = ({ variant = 'hero', gradients = [], grain = fa
           { color: 'rgba(141,255,105,0.45)', stop: '100%' },
           { color: 'rgba(141,255,105,0.25)', stop: '100%' },
         ],
-        blur: '0px',
+        blur: '3px',
         opacity: 0.5,
       },
 
@@ -85,7 +85,7 @@ const RadialGradientBackground = ({ variant = 'hero', gradients = [], grain = fa
           { color: 'rgba(141,255,105,0.45)', stop: '100%' },
           { color: 'rgba(141,255,105,0.25)', stop: '100%' },
         ],
-        blur: '0px',
+        blur: '3px',
         opacity: 0.5,
       },
       {
@@ -101,6 +101,36 @@ const RadialGradientBackground = ({ variant = 'hero', gradients = [], grain = fa
         blur: '0px',
         opacity: 0.5,
       },
+    ],
+    gallary: [
+      {
+        position: 'top-10 left-0 -translate-x-1/2 -translate-y',
+        size: 'w-[1400px] h-[1400px]',
+        colors: [
+          { color: 'rgba(141,255,105,0.25)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.45)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.5)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.45)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.25)', stop: '100%' },
+        ],
+        blur: '3px',
+        opacity: 0.5,
+      },
+
+      {
+        position: 'top-1 left-[75%]',
+        size: 'w-[700px] h-[700px]',
+        colors: [
+          { color: 'rgba(141,255,105,0.25)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.45)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.5)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.45)', stop: '100%' },
+          { color: 'rgba(141,255,105,0.25)', stop: '100%' },
+        ],
+        blur: '3px',
+        opacity: 0.5,
+      },
+
     ],
 
 
