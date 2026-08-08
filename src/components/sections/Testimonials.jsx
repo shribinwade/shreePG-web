@@ -46,7 +46,7 @@ const Testimonials = () => {
     return (
         <section id='testimonials' className='relative py-10  overflow-hidden bg-black'>
             <div className='absolute inset-0 overflow-hidden'>
-                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 opacity-90 rounded-full blur-3xl' />
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-100 bg-primary/10 opacity-90 rounded-full blur-3xl' />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
