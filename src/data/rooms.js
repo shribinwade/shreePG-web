@@ -4,7 +4,7 @@ export const ROOMS = [
     img: "assets/SingleRoom.avif",
     tag: "Most Private",
     title: "Private Single Room",
-    price: "₹15,000,",
+    price: "₹15,000",
     desc: "A quiet room of your own with an attached bathroom, study desk and balcony access.",
     points: ["Attached bathroom & hot water", "Study table + ergonomic chair", "Full-size cupboard with lock", "Daily housekeeping"],
   },

@@ -40,12 +40,12 @@ const Rooms = () => {
 
                                 <Card className='items-center gap-2.5  bg-linear-to-r from-primary/10 via-primary/15 via-primary/20 border border-primary/20  rounded-2xl overflow-hidden m-px h-[calc(100%-2px)] hover:border-white/80'  key={index.id}>
                                     <Card.Header className='mb-5' >
-                                        <img src={index.img} className='w-full  mask-[linear-gradient(to_bottom,black_60%,transparent_100%)]  object-cover ' />
+                                        <img src={index.img} alt={index.title} className='w-full  mask-[linear-gradient(to_bottom,black_60%,transparent_100%)]  object-cover ' />
                                     </Card.Header>
                                     <Card.Body className='px-[30px] py-[5px] mx-auto'>
                                         <h2 className='text-2xl font-bold tracking-wide mb-3'>{index.title}</h2>
                                         <p className='text-base text-gray-50/50 tracking-wide'>{index.desc}</p>
-                                        <p className='mt-5'><span className="text-3xl font-bold">{index.price}</span> <span className="text-sm text-gray-500">/ month</span></p>
+                                        <p className='mt-5'><span className="text-3xl font-bold">{index.price}*</span> <span className="text-sm text-gray-500">/ month</span></p>
                                         <ul className='mt-5'>
                                             {index.points.map((point, j) => (
                                                 <span key={j} className='flex items-center align-middle py-1 gap-1'><Check className='w-5 h-5' /><li key={j}>{point}</li></span>

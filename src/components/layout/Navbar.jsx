@@ -36,7 +36,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-1">
 
-            <img className='w-15 h-14' src="assets/logo.avif" alt="logo" />
+            <img className='w-15 h-15' src="assets/logo.avif" alt="logo" />
             <div>
               <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="uppercase hover:cursor-pointer text-2xl font-bold bg-gradient-to-r from-[#7A5C00] via-[#D4AF37] to-[#FFE082] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
