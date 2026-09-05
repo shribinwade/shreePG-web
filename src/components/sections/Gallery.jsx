@@ -37,7 +37,7 @@ const Gallery = () => {
           <FadeIn delay={300}>
             <main className="max-w-full z-10 grid grid-cols-1 md:grid-cols-3 gap-2">
               {images.map((image, index) => (
-                <FadeIn delay={index * 200} className="aspect-4/3 overflow-hidden">
+                <FadeIn key={index}  delay={index * 200} className="aspect-4/3 overflow-hidden">
                 <a
                   href="#"
                   key={index}

@@ -10,6 +10,7 @@ import Footer from './components/layout/Footer';
 import Testimonials from './components/sections/Testimonials';
 import Gallery from './components/sections/Gallery';
 import FAQ from './components/sections/FAQ';
+import MobileContactBar from './components/layout/MobileContactBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +31,7 @@ function App() {
           <Contact />
           <Footer />
         </main>
+        <MobileContactBar />
       </div>
     </>
   )

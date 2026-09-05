@@ -125,7 +125,7 @@ const Footer = () => {
         </div>
 
         <FadeIn delay={300}>
-          <div className='pt-8 border-t border-white/10 mb-10' >
+          <div className='pt-8 border-t border-white/10 mb-25 '  >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <p className='text-white/50 text-sm'>
                 © {new Date().getFullYear()} {pg.name} Stay Home & PG. All rights

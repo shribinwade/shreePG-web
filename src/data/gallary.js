@@ -4,7 +4,7 @@ export const images = [
         alt: "SingleRoom",
     },
     {
-        src: 'assets/DoubleRoom.avif',
+        src: 'assets/s2.avif',
         alt: 'DoubleRoom',
     },
 
@@ -21,7 +21,7 @@ export const images = [
         alt: 'Room',
     },
     {
-        src: 'assets/Room7.avif',
+        src: 'assets/s1.avif',
         alt: 'Room',
     },
 
