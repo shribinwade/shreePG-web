@@ -24,6 +24,10 @@ export const images = [
         src: 'assets/s1.avif',
         alt: 'Room',
     },
+    {
+        src: 'assets/bathroom.avif',
+        alt: 'bathroom'
+    },
 
    
 

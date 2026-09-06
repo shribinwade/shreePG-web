@@ -10,7 +10,7 @@ export const ROOMS = [
   },
   {
     id: 2,
-    img: "assets/DoubleRoom.avif",
+    img: "assets/s2.avif",
     tag: "Best Value",
     title: "Double Sharing",
     price: "₹9,000",
